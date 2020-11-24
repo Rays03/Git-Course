@@ -1,0 +1,43 @@
+Install Git : https://git-scm.com/download/win
+
+Setting Git : 
+set username --> git config --global user.name "UserName"
+set email --> git config --global user.email user.name@gmail.com
+show configuration list --> git config --list
+
+Create Repository : 
+create repository --> cd directory, then type --> git init
+create new file --> echo Text > "file.txt"
+check repo status --> git status -s or just git status
+add files to be staged  --> git add "file.txt"
+commit files --> git commit -m "First Commit"
+see changes --> git log, git log -x, git log --pretty=oneline
+
+LifeCycle : new repository --new file--> Untracked(??) --add--> Staged(A) --commit--> Unmodified(unlisted) --edit--> Modified( M) 
+Modified( M) --add--> Modified and Staged --> (M ) --edit--> Modified, Staged, and Modified again(MM)
+
+add all files to staged --> git add .
+add all files to staged and commit --> git commit -a -m "Version 1"
+
+remove file from git and local --> git rm "file"
+remove modified/staged file from git and local --> git rm -f "file"
+remove file from git but not from local --> git rm --cached "file"
+
+rename tracked file --> git mv "file0" "file1"
+edit previous commit --> git commit --amend -m "Commit"
+unstage file --> git restore --staged "file"
+unmodify file --> git restore "file"
+
+add new remote repository --> git remote add name https://github.com/User/Repo
+list all remote --> git remote -v or just git remote
+set main brach --> git branch -M main
+push repository to remote --> git push name main
+inspect a remote --> git remote show name
+cloning the whole repository to our device --> git clone https://github.com/User/Repo
+pull the newest version from the remote --> git pull https://github.com/User/Repo
+remove a remote --> git remote remove name
+rename a remote --> git remote rename name0 name1
+
+
+
+
